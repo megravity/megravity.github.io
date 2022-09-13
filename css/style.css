@@ -98,6 +98,7 @@ body {
     font-family: 'Chivo', sans-serif;
     background-color: var(--clr-body-bg);
     color: var(--clr-body-text);
+    font-size: 1.125rem;
 }
 
 h1, h2 {
@@ -142,6 +143,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 0 1rem;
+    margin: 2rem 0;
 }
 
 nav ul {
@@ -152,14 +154,22 @@ nav ul {
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 1rem;
-    row-gap: 0;
+    row-gap: 0.75rem;
     font-size: 1.5rem;
     margin-top: 1rem;
 }
 
 nav a {
     color: var(--clr-red);
+    text-decoration-color: #fe605500;
+    transition: all 200ms ease-in-out;
 }
+
+nav a:hover,
+nav a:focus {
+    text-decoration-color: #fe6055;
+}
+
 
 /* Intro Section */
 
@@ -206,6 +216,7 @@ h1 div:nth-of-type(2) {
     display: inline-block;
     padding: 0.5rem;
     border-radius: 0.25rem; 
+    transition: all 250ms;
 }
 
 .skills-list {
@@ -245,6 +256,8 @@ h1 div:nth-of-type(2) {
     justify-content: space-around;
     padding: 1rem;
     border-radius: 8px;
+    -webkit-box-shadow: 3px 5px 12px 4px rgba(0,0,0,0.23); 
+    box-shadow: 3px 5px 12px 4px rgba(0,0,0,0.23);
 }
 
 .card img {
@@ -297,6 +310,12 @@ h1 div:nth-of-type(2) {
     #about img {
         margin-left: 0;
         margin-inline: auto;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    body {
+        font-size: 1.2rem;
     }
 }
 
